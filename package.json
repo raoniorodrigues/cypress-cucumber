@@ -1,0 +1,30 @@
+{
+  "name": "Cucumber Cypress Test",
+  "version": "1.0.0",
+  "description": "automatcao de teste MarketClub",
+  "main": "index.js",
+  "dependencies": {
+    "cypress-cucumber-preprocessor": "^4.0.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/support/steps"
+  },
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.5.0",
+    "cypress": "^5.6.0",
+    "cypress-localstorage-commands": "^1.7.0",
+    "install": "^0.13.0",
+    "npm": "^8.16.0",
+    "or": "^0.2.0"
+  },
+  "scripts": {
+    "cy:run": "cypress run --config video=false --env allure=true",
+    "allure:generate": "allure generate allure-results",
+    "allure:open": "allure open allure-report",
+    "allure:clear": "rm -r allure-results/ allure-report || true",
+    "test": "npx npm-run-all cy:run allure:generate",
+    "cypress:open": "cypress open"
+  },
+  "author": "Tiago Amaro",
+  "license": "ISC"
+}

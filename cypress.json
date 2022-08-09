@@ -1,0 +1,7 @@
+{
+    "viewportWidth": 1200,
+    "viewportHeight": 800,
+    "defaultCommandTimeout": 10000,
+    "baseUrlLoja": "https://marketclub-staging.credicitrus.com.br/",
+    "baseUrlBackoffice": "https://marketclub-backoffice-staging.credicitrus.com.br"
+}
